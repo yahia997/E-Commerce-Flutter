@@ -3,7 +3,6 @@ import 'package:project/constants/colors.dart';
 import 'package:project/models/Users.dart';
 import 'package:project/productsDB.dart';
 import 'package:project/screens/Details_screen.dart';
-import 'package:project/usersDB.dart';
 
 class StarterProducts extends StatelessWidget {
   const StarterProducts({super.key, required this.user});

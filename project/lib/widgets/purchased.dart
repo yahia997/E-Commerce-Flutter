@@ -27,15 +27,15 @@ class _purchasedState extends State<purchased> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              width: 135,
+              width: MediaQuery.of(context).size.width * 0.25,
               height: 125,
               child: Image.asset(
-                "assets/images/${widget.obj['img']}", width: 135, height: 125,), // display product image dynamically,
+                "assets/images/${widget.obj['img']}",
+                fit: BoxFit.contain,
+              ), // display product image dynamically,
             ),
-            
             SizedBox(
-              width: 200,
-              height: 125,
+              width: MediaQuery.of(context).size.width * 0.5,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +56,7 @@ class _purchasedState extends State<purchased> {
                             // no negative
                             if (widget.obj['count'] > 1) {
                               widget.obj['count']--;
-              
+
                               // update total price (decrease) and count
                               widget.handler(-widget.obj['price'], -1);
                             }
@@ -76,7 +76,7 @@ class _purchasedState extends State<purchased> {
                         onTap: () {
                           setState(() {
                             widget.obj['count']++;
-              
+
                             // update total price (increase) and count
                             widget.handler(widget.obj['price'], 1);
                           });
@@ -90,7 +90,7 @@ class _purchasedState extends State<purchased> {
               ),
             ),
             Container(
-              height: 125,
+              width: MediaQuery.of(context).size.width * 0.1,
               alignment: Alignment.bottomRight,
               child: IconButton(
                   onPressed: () {

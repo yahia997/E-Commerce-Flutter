@@ -233,7 +233,7 @@ class _register_screenState extends State<register_screen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Row(
+                  Column(
                     children: [
                       const SizedBox(
                         width: 60,

@@ -142,7 +142,7 @@ class _login_screenState extends State<login_screen> {
                 const SizedBox(
                   height: 20,
                 ),
-                Row(
+                Column(
                   children: [
                     const SizedBox(
                       width: 60,
